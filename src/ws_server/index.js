@@ -4,11 +4,12 @@ import { mouseDownCommand } from './commands/mouse-down.js';
 import { mouseLeftCommand } from './commands/mouse-left.js';
 import { mouseRightCommand } from './commands/mouse-right.js';
 import { mousePositionCommand } from './commands/mouse-position.js';
+import { drawCircleCommand } from './commands/draw_circle.js';
 import commandsHandler from './commands-handler.js';
 
 const commands = [
   mouseUpCommand, mouseDownCommand, mouseLeftCommand, mouseRightCommand,
-  mousePositionCommand];
+  mousePositionCommand, drawCircleCommand];
 
 const createWsServer = (server) => {
     const ws = new WebSocketServer({ server });
