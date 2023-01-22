@@ -1,5 +1,4 @@
 import { httpServer } from './src/http_server/index.js';
-import { mouse } from '@nut-tree/nut-js';
 import { createWsServer } from './src/ws_server/index.js';
 
 const HTTP_PORT = 8181;
