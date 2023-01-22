@@ -22,6 +22,7 @@ const drawCircleCommand = {
                 startPosition.y + normalizedCoords.y);
             points.push(absPoint);
         }
+        await mouse.setPosition(points[0]);
         mouse.config.mouseSpeed = speed;
         await mouse.pressButton(Button.LEFT);
         await mouse.move(points);
