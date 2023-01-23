@@ -6,6 +6,8 @@ const drawRectangleCommand: Command = {
     run: async (args, sendResult) => {
         const width = Number(args[0]);
         const height = Number(args[1]);
+
+        mouse.config.mouseSpeed = 500;
         
         await mouse.pressButton(Button.LEFT);
         await mouse.move(right(width));
