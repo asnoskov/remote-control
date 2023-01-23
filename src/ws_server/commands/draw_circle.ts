@@ -1,12 +1,13 @@
 import { mouse, down, Point, Button } from '@nut-tree/nut-js';
+import { Command } from './interfaces/command';
 
-const getCirclePointCoords = (radius, angle) => {
+const getCirclePointCoords = (radius: number, angle: number) => {
     const x = radius * Math.sin(Math.PI * angle / 180);
     const y = radius * Math.cos(Math.PI * angle / 180);
     return { x, y };
 }
 
-const drawCircleCommand = {
+const drawCircleCommand: Command = {
     commandName: 'draw_circle',
     run: async (args, sendResult) => {
         const startPosition = await mouse.getPosition();

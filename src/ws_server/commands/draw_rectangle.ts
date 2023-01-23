@@ -1,6 +1,7 @@
 import { mouse, right, left, up, down, Point, Button } from '@nut-tree/nut-js';
+import { Command } from './interfaces/command';
 
-const drawRectangleCommand = {
+const drawRectangleCommand: Command = {
     commandName: 'draw_rectangle',
     run: async (args, sendResult) => {
         const width = Number(args[0]);
